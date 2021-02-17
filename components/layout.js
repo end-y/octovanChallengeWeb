@@ -1,4 +1,4 @@
-import Link from 'next/Link'
+import NextLink from 'next/link';
 import Navigation from '../components/navigation'
 import Head from 'next/head'
 import nProgress from 'nprogress';
