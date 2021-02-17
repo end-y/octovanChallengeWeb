@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Link from 'next/Link'
+import NextLink from 'next/link';
 import {Title1,PassengerCard, PassengerUl, Button, Icon} from "../styles/styles"
 import {faAngleRight} from '@fortawesome/free-solid-svg-icons'
 const Card = ({n,name, bool1, bool2, bool3,href,as, page, size }) => {
@@ -11,11 +11,11 @@ const Card = ({n,name, bool1, bool2, bool3,href,as, page, size }) => {
                 <li style={{animationDelay: (n*0.2)+"s"}} className="table-row">
                     <div>
                         <Title1 >Passeger {n}: {name}</Title1>
-                        <Link  href={href} as={as}>
+                        <NextLink  href={href} as={as}>
                             <Button style={{marginTop:15}}>
                                 <Icon>Details <FontAwesomeIcon style={{marginLeft:15,width:20}} icon={faAngleRight} /></Icon>
                             </Button>
-                        </Link>
+                        </NextLink>
                     </div>
                     {/* Airline bilgilerinin yer aldığı bölüm */}
                     <div style={{textAlign:"center"}}>
