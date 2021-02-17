@@ -1,4 +1,4 @@
-import Link from "next/Link"
+import NextLink from 'next/link';
 import { useState } from "react"
 import {faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -21,10 +21,10 @@ const Navigation = ({navigation}) => {
         {navigation.map((e,i) => {
             return(
             <NavItem key={i}>
-                <Link href={links[i]}>
+                <NextLink href={links[i]}>
                     {/* Homepage ternany operator kontrol edildi. */}
                     <NavLink key={i}>{e == "/" ? "Homepage" : e.substring(1,e.length)}</NavLink>
-                </Link>
+                </NextLink>
             </NavItem>
             )
         })}
